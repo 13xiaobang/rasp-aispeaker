@@ -34,7 +34,7 @@ void sleep_ms(int ms)
 int is_real_wakeup(char* result)
 {
     //result = {"id":0,"score":-16,"eos":2330,"bos":390,"sst":"wakeup"}
-    char *res[] = {"你好微晶","搜索设备","和我说话"};
+    char *res[] = {"你好音响","搜索设备","和我说话"};
     char* pos = strstr(result, "\"score\":");
     if(pos)
     {
@@ -423,7 +423,7 @@ exit:
 int main(int argc, char* argv[])
 {
     int         ret       = MSP_SUCCESS;
-    const char *lgi_param = "appid = 5a03a928,engine_start = ivw,ivw_res_path =fo|res/ivw/wakeupresource.jet, work_dir = ."; //使用唤醒需要在此设置engine_start = ivw,ivw_res_path =fo|xxx/xx 启动唤醒引擎
+    const char *lgi_param = "appid = 5a09a164,engine_start = ivw,ivw_res_path =fo|res/ivw/wakeupresource.jet, work_dir = ."; //使用唤醒需要在此设置engine_start = ivw,ivw_res_path =fo|xxx/xx 启动唤醒引擎
     const char *ssb_param = "ivw_threshold=0:-30;0:-30;0:-30,sst=wakeup";
 
     if(do_pcm_nsx_init())
